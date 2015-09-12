@@ -61,7 +61,6 @@ set path+=./,/usr/include/**,**,~/src/vim70/**,/mnt/hgfs/lxx/Ipanel3_Market_MV31
 "~/src/vim70/**　　在~/src/vim70的所有子目录树中进行搜索
 
 
-
 	set incsearch
 	set hls
 	set tags+=/mnt/hgfs/lxx/Ipanel3_Market_MV310_bak/tags
@@ -71,4 +70,8 @@ set path+=./,/usr/include/**,**,~/src/vim70/**,/mnt/hgfs/lxx/Ipanel3_Market_MV31
 	let Tlist_Exit_OnlyWindow=1  "tagList窗口是最后一个窗口，则退出Vim
 	let Tlist_Use_Right_Window=1 "在Vim窗口右侧显示taglist窗口
 
-
+"cscope maps
+map <silent> <F9> :TlistToggle <cr> 
+map <silent> <F8> :cs find c <C-R>=expand("<cword>")<CR><CR>
+"加载cscope数据库
+"cs add /mnt/hgfs/lxx/Ipanel3_Market_MV310_bak/cscope.out /mnt/hgfs/lxx/Ipanel3_Market_MV310_bak
